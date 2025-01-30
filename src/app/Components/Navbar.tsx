@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from 'next/image'  
 import { ShoppingBag } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import {
@@ -22,16 +22,16 @@ function Navbar() {
             <ul className="flex gap-12" >
                 {links.map((e,i)=>{
                     return(
-                        <li className="text-[#24224F] font-medium" key={i}>{e}</li>
+                        <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent" key={i}>{e}</li>
                     )
                 })}
                 </ul>
         </div>
         <div className=" flex">
                 <div className="pr-4 pt-1  " >
-                    <ShoppingBag size={30} className="text-[#24224F]"/>   
+                    <ShoppingBag size={30} className="text-[#24224F] hover:text-white"/>   
                 </div>
-                <button className=" hidden md:block bg-white px-5 py-1 text-[#24224F] font-medium rounded-[3px]">LOGIN</button>
+                <button className=" hidden md:block bg-white px-5 py-1 text-[#24224F] font-medium rounded-[3px] hover:bg-[#24224f] hover:text-white">LOGIN</button>
                 <div className="md:hidden ">
         <DropdownMenu >
   <DropdownMenuTrigger  aria-setsize={35} ><Menu size={35}/></DropdownMenuTrigger>
