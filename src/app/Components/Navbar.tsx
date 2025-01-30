@@ -14,6 +14,7 @@ function Navbar() {
     const links = ["HOME","PRODUCTS","CONTACT"]
   return (
     <>
+    <header>
     <div className="w-full h-[100px] bg-[#8BD5FF] flex justify-between items-center px-8 ">
         <div>
             <Image src={"/babyWood.png"} alt="logo " height={100} width={100}/>
@@ -29,7 +30,7 @@ function Navbar() {
         </div>
         <div className=" flex">
                 <div className="pr-4 pt-1  " >
-                    <ShoppingBag size={30} className="text-[#24224F] hover:text-white"/>   
+                    <ShoppingBag size={30} className="text-[#24224F] hover:text-white cursor-pointer"/>   
                 </div>
                 <button className=" hidden md:block bg-white px-5 py-1 text-[#24224F] font-medium rounded-[3px] hover:bg-[#24224f] hover:text-white">LOGIN</button>
                 <div className="md:hidden ">
@@ -49,6 +50,7 @@ function Navbar() {
         </div>
        
     </div>
+    </header>
     </>
   )
 }
