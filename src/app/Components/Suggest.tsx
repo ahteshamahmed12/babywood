@@ -26,7 +26,7 @@ function Suggest() {
      <main >
         <div className="w-full pb-16">
             <div className="">
-                <h5 className="font-[Rufina] text-3xl font-medium text-[#24224f] text-center pt-12">
+                <h5 className="font-[Rufina] text-xl md:text-3xl font-medium text-[#24224f] text-center pt-12">
                     Best Milk For Your Baby
                 </h5>
                 <p className="text-center text-[#24224f] pt-2">These 3 powdered milks are great for your baby's health</p>
