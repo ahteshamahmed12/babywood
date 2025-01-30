@@ -14,7 +14,7 @@ function Navbar() {
     const links = ["HOME","PRODUCTS","CONTACT"]
   return (
     <>
-    <header>
+    <header className='border-b border-white'>
     <div className="w-full h-[100px] bg-[#8BD5FF] flex justify-between items-center px-8 ">
         <div>
             <Image src={"/babyWood.png"} alt="logo " height={100} width={100}/>
