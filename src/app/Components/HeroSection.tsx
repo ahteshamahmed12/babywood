@@ -3,9 +3,9 @@ import Image from "next/image"
 const HeroSection = () => {
   return (
     <>
-    <aside className="h-[83vh] w-full bg-[#8bd5ff]   " >
-        <div className="w-full  ">
-        <div className=' flex flex-col-reverse  md:flex-row justify-center md:justify-evenly items-center bg-[#8bd5ff] pt-2 '>
+    <header className="  w-full bg-[#8bd5ff]   " >
+        <div className="w-full pb-6 md:pb-20  ">
+        <div className=' flex flex-col-reverse  md:flex-row justify-center md:justify-evenly items-center bg-[#8bd5ff] pt-6 '>
             <div className=' md:pt-10 text-center md:text-left bg-[#8bd5ff] pt-6'>
                 <h6 className='font-[Rufina] text-5xl lg:text-7xl font-medium text-[#24224f] '>
                 Easily buy baby <br /> milk powder <br />for healthy 
@@ -22,7 +22,7 @@ const HeroSection = () => {
             </div>
         </div>
         </div>
-    </aside>
+    </header >
     </>
   )
 }

@@ -15,9 +15,9 @@ function Navbar() {
   return (
     <>
     <header className='border-b border-white'>
-    <div className="w-full h-[100px] bg-[#8BD5FF] flex justify-between items-center px-8 ">
+    <nav className="w-full h-[100px] bg-[#8BD5FF] flex justify-between items-center px-8 ">
         <div>
-            <Image src={"/babyWood.png"} alt="logo " height={100} width={100}/>
+            <Image  src={"/babyWood.png"} alt="logo " height={100} width={100}/>
         </div>
         <div  className="hidden md:block">
             <ul className="flex gap-12" >
@@ -36,7 +36,7 @@ function Navbar() {
                 <div className="md:hidden ">
         <DropdownMenu >
   <DropdownMenuTrigger  aria-setsize={35} ><Menu size={35}/></DropdownMenuTrigger>
-  <DropdownMenuContent>
+  <DropdownMenuContent className='bg-[#8BD5FF] text-white'>
     
     <DropdownMenuSeparator />
     <DropdownMenuItem>HOME</DropdownMenuItem>
@@ -49,7 +49,7 @@ function Navbar() {
         </div>
         </div>
        
-    </div>
+    </nav>
     </header>
     </>
   )
