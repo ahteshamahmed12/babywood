@@ -7,7 +7,7 @@ const HeroSection = () => {
         <div className="w-full pb-6 md:pb-20  ">
         <div className=' flex flex-col-reverse  md:flex-row justify-center md:justify-evenly items-center bg-[#8bd5ff] pt-6 '>
             <div className=' md:pt-10 text-center md:text-left bg-[#8bd5ff] pt-6'>
-                <h6 className='font-[Rufina] text-5xl lg:text-7xl font-medium text-[#24224f] '>
+                <h6 className='font-serif text-5xl lg:text-7xl font-medium text-[#24224f] '>
                 Easily buy baby <br /> milk powder <br />for healthy 
                 </h6>
                 <p className="pt-4">

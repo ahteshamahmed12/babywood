@@ -36,9 +36,9 @@ function Navbar() {
                 <div className="md:hidden ">
         <DropdownMenu >
   <DropdownMenuTrigger  aria-setsize={35} ><Menu size={35}/></DropdownMenuTrigger>
-  <DropdownMenuContent className='bg-[#8BD5FF] text-white'>
+  <DropdownMenuContent className='bg-[#24224f] text-white'>
     
-    <DropdownMenuSeparator />
+    <DropdownMenuSeparator  />
     <DropdownMenuItem>HOME</DropdownMenuItem>
     <DropdownMenuItem>PRODUCTS</DropdownMenuItem>
     <DropdownMenuItem>CONTACT</DropdownMenuItem>
