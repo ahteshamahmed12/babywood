@@ -23,7 +23,7 @@ export default function Home() {
       < FeedBack />
     </div>
     <div>
-    {/* <Footer/> */}
+    <Footer/>
     </div>
    </div>
   );

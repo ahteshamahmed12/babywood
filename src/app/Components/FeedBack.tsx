@@ -43,7 +43,7 @@ const FeedBack = () => {
                                 <MessageCircle  />
                                 
                                 <h1 className='text-xl text-[#24224F] font-serif pt-3 text-center md:text-left '>{e.name}</h1>
-                                <p className='pt-2'>{e.description}</p>
+                                <p className='pt-2 text-[#24224f]'>{e.description}</p>
                             </div>
                         </div>
                     )
