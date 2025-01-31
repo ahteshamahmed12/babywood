@@ -3,18 +3,21 @@ import Footer from "./Components/Footer";
 import HeroSection from "./Components/HeroSection";
 import Navbar from "./Components/Navbar";
 import Suggest from "./Components/Suggest";
-
+import FeedBack from "./Components/FeedBack";
 export default function Home() {
   return (
    <div>
-    <div>
+    <div >
       <Navbar />
     </div>
     <div>
-    < HeroSection />
+    < HeroSection  />
     </div>
     <div>
     <Suggest/>
+    </div>
+    <div>
+      < FeedBack />
     </div>
     <div>
     {/* <Footer/> */}
