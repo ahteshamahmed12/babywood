@@ -1,4 +1,4 @@
-
+import Care from "./Components/Care";
 import Footer from "./Components/Footer";
 import HeroSection from "./Components/HeroSection";
 import Navbar from "./Components/Navbar";
@@ -15,6 +15,9 @@ export default function Home() {
     </div>
     <div>
     <Suggest/>
+    </div>
+    <div>
+      <Care />
     </div>
     <div>
       < FeedBack />
