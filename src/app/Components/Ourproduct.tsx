@@ -38,7 +38,7 @@ const Ourproduct = async () => {
                         height={300}
                         src={urlFor(list.image).width(500).url()}
                         alt='milk '
-                        className={`${index == 0 && 'h-[430px] w-[400px] pb-16  '}`}
+                        className={`${index == 0 && ' lg:h-[430px] w-[400px] pb-16  '}`}
                         />
                         </div>
                     )}
