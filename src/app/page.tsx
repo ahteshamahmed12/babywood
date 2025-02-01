@@ -5,6 +5,7 @@ import HeroSection from "./Components/HeroSection";
 import Navbar from "./Components/Navbar";
 import Suggest from "./Components/Suggest";
 import FeedBack from "./Components/FeedBack";
+import Ourproduct from "./Components/Ourproduct";
 export default function Home() {
   return (
    <div>
@@ -19,6 +20,9 @@ export default function Home() {
     </div>
     <div>
       <Care />
+    </div>
+    <div>
+      <Ourproduct />
     </div>
     <div>
       < FeedBack />
