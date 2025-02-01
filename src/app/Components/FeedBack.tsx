@@ -33,7 +33,7 @@ const FeedBack = () => {
         <div>
             <h4 className='text-[#24224F] text-3xl font-serif text-center'>Feedback Corner</h4>
         </div>
-        <div className='flex flex-col items-center md:flex-row justify-between pt-12 md:pt-20 md:px-10  pb-10 gap-8 md:gap-5  '>
+        <div className='flex flex-col items-center md:flex-row justify-evenly pt-12 md:pt-20 md:px-10  pb-10 gap-8 md:gap-5  '>
             {
                 feedbackcard.map((e,i)=>{
                     return(
