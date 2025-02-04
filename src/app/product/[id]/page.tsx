@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
@@ -7,7 +8,7 @@ const page = async (props:any) => {
   console.log(prod)
    
   return (
-    <div className='px-4 mt-7 md:px-8 md:mt-7 lg:mt-12'>
+    <div className='px-4 mt-7 md:px-8 md:mt-7 lg:mt-12 pb-10'>
      { prod.map((res:any,index:any)=>(
     <div className='flex flex-col  gap-10 xl:flex-row xl:justify-items-start  ' key={index}>
       <div className="w-full md:flex md:flex-col md:justify-center  md:items-center  ">
@@ -34,11 +35,13 @@ const page = async (props:any) => {
          <h4 className='font-semibold' >Type: {res.type}</h4> 
          <h4 className='font-semibold' >Weight: {res.weight}</h4> 
          <h4 className='font-semibold'>Price: {res.price} Rs</h4> 
+      <Button> Add to Cart </Button>
          </div>
          </div>
    
 
     <div>
+      
       
     </div>
 

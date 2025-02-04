@@ -22,7 +22,7 @@ async function  Product() {
                 revalidate:60
             });
   return (
-    <div className='px-4 sm:px-8 lg:px-16'>
+    <div className='px-4 sm:px-8 lg:px-16 pb-10'>
     
     <div >
     <Searchs/>
@@ -30,13 +30,13 @@ async function  Product() {
      <div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 '>
         {
           prod.map((list:any,index:any)=>(
-          <div  className='flex flex-col items-center' key={index}>
+          <div  className='flex flex-col items-center hover:shadow-lg p-5' key={index}>
                 <Link href={`/product/${list._id}`}>
              
                 <div className='w-full h-[300px] relative'>
                 <Image
-                  width={500}
-                  height={500}
+                  width={300}
+                  height={300}
                   src={urlFor(list.image).url()}
                   alt='milk '
                   className= 'object-cover w-full h-full rounded-lg '
@@ -45,9 +45,11 @@ async function  Product() {
               
               <div className='mt-4 text-center font-semibold text-[#24224f] '>
               <h5 className='text-xl' >{list.title}</h5>
-               <p className='mt-2 text-lg' >{list.price}</p>
-              <h6 className='text-base text-gray-600' >{list.brand}</h6>
-              <p>{list.id}</p>
+              <div className='flex pt-1  justify-center '>
+               <p className='  pr-3' >$ {list.price}</p>
+              <h6 className=' border-l border-black  text-gray-600 pl-3' >{list.brand}</h6>
+              </div>
+              <p className='pt-2'>{list.id}</p>
              
               </div>
              <div className='flex justify-center items-center'>

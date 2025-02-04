@@ -1,5 +1,5 @@
 import Image from 'next/image'  
-import { ShoppingBag } from 'lucide-react';
+import {  ShoppingBag } from 'lucide-react';
 import { Menu } from 'lucide-react';
 import {
     DropdownMenu,
@@ -9,21 +9,24 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
+import Link from 'next/link';
   
 function Navbar() {
     const links = ["HOME","PRODUCTS","CONTACT"]
   return (
     <>
-    <header className='border-b border-white'>
+    <header className='border-b border-white shadow-lg'>
     <nav className="w-full h-[100px] bg-[#8BD5FF] flex justify-between items-center px-8 ">
         <div>
+          <Link href={'../'}>
             <Image  src={"/babyWood.png"} alt="logo " height={100} width={100}/>
+            </Link>
         </div>
         <div  className="hidden md:block">
             <ul className="flex gap-12" >
                 {links.map((e,i)=>{
                     return(
-                        <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent" key={i}>{e}</li>
+                      <Link href={`${ e=== 'HOME' && '../' || e === 'PRODUCTS'&& '/product' || e=== 'CONTACT' && '/Contact' }  ` }> <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent" key={i}>{e}</li></Link>
                     )
                 })}
                 </ul>

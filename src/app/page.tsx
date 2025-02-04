@@ -25,9 +25,7 @@ export default function Home() {
     <div>
       < FeedBack />
     </div>
-    <div>
-    <Footer/>
-    </div>
+    
    </div>
   );
 }
