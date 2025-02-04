@@ -5,7 +5,7 @@ import { urlFor } from '@/sanity/lib/image'
 import Link from 'next/link'
 import { Key } from 'lucide-react'
 const Ourproduct = async () => {
-    const prod=await client.fetch(`*[_type == "Product"]{
+    const prod=await client.fetch(`*[_type == "Product"][7..9]{
         title,
         description,
         tags,
@@ -31,23 +31,25 @@ const Ourproduct = async () => {
             {
                 prod.map((list:any,index:any)=>(
                     <div key={index}>
+                    
                     {list.image && (
                         <div>
                         <Image
                         width={300}
-                        height={300}
-                        src={urlFor(list.image).width(500).url()}
+                        height={400}
+                        src={urlFor(list.image).width(300).url()}
                         alt='milk '
-                        className={`${index == 0 && ' lg:h-[430px] w-[400px] pb-16  '}`}
+                        className={` ${index == 0 && ' lg:h-[430px] w-[400px] pb-16   '}`}
                         />
                         </div>
                     )}
                         <div className={`${index >= 1&& 'mt-24'} ${index == 0 && 'mb-8'} `} >
                     <h5 className={`text-center text-[#24224f] font-[poppins] font-semibold text-3xl `}>{list.title}</h5>
                     <div className='flex justify-center  items-center mt-10'>
-                    <button className='bg-[#24224f] text-white w-[130px] xl:w-[180px] xl:h-[44px] h-8 cursor-pointer ' ><Link href={""}>Buy Now</Link></button>
+                    <button className='bg-[#24224f] text-white w-[130px] xl:w-[180px] xl:h-[44px] h-8 cursor-pointer ' ><Link href={"product/"}>Buy Now</Link></button>
                     </div>
                     </div>
+                    
                     </div>
                 ))
             }

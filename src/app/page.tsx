@@ -9,9 +9,7 @@ import Ourproduct from "./Components/Ourproduct";
 export default function Home() {
   return (
    <div>
-    <div >
-      <Navbar />
-    </div>
+    
     <div>
     < HeroSection  />
     </div>
