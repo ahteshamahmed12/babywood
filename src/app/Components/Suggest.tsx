@@ -50,7 +50,7 @@ function Suggest() {
             </div>
             <div className="w-full flex justify-center">
                
-            <button className=" flex  mt-16  pl-8 pr-10 border py-2 border-black"> <Link href={"product/"}>See All</Link><MoveRight className="ml-4" /></button>
+            <button className=" flex  mt-16  pl-8 pr-7 hover:bg-[#24224f] hover:text-white  border py-2 border-black"> <Link href={"product/"}>See All</Link><MoveRight className="ml-3" /></button>
             </div>
         </div>
      </main>

@@ -8,7 +8,7 @@ function Footer() {
   let compony =["COMPANY","About us","Contact","News","Support"]
   return (
    <>
-   <footer className="pb-10 w-full bg-[#8bd5ff]">
+   <footer className="pb-10 w-full  bg-[#8bd5ff]">
       <div className="main  ">
         <div className="flex flex-col md:flex-row md:justify-evenly items-center">
           

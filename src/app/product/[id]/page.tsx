@@ -1,5 +1,3 @@
-
-
 import { Button } from '@/components/ui/button';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
@@ -15,10 +13,10 @@ const page = async (props:any) => {
  
    
   return (
-    <div className='px-4 mt-7 md:px-8 md:mt-7 lg:mt-12 pb-10'>
+    <div className='px-4 mt-7 md:px-8 md:mt-7 lg:mt-12 pb-10  '>
      { prod.map((res:any,index:any)=>(
     <div className='flex flex-col  gap-10 xl:flex-row xl:justify-items-start  ' key={index}>
-      <div className="w-full md:flex md:flex-col md:justify-center  md:items-center  ">
+      <div className="w-full md:flex md:flex-col md:justify-center  md:items-center   ">
       {res.image && (
 
           <Image 
@@ -26,7 +24,7 @@ const page = async (props:any) => {
           height={400}
           src={urlFor(res.image).url()}
           alt='images'
-          className=' relative w-full max-w-[300px] max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] h-auto mt-3 '
+          className=' relative w-full  max-w-[300px]  md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] h-auto mt-3 '
           />
         
          )}
