@@ -26,14 +26,14 @@ const page = async (props:any) => {
           height={400}
           src={urlFor(res.image).url()}
           alt='images'
-          className=' relative xl:w-[500px] xl:h-[500px]  '
+          className=' relative w-full max-w-[300px] max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] h-auto mt-3 '
           />
         
          )}
        </div>
          
 
-         <div  className='text-[#24224f] flex flex-col gap-6  '>
+         <div  className='text-[#24224f] flex flex-col gap-6 xl:mt-24 '>
          <h4 className='text-center text-4xl pt-6'>{res.title}</h4> 
          <p className='text-pretty  text-2xl'>{res.description}</p>
          <div className='bg-[#8bd5ff] text-center text-2xl flex flex-col gap-4 py-5  '> 
