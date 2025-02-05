@@ -1,3 +1,4 @@
+
 import Image from 'next/image'  
 import {  ShoppingBag } from 'lucide-react';
 import { Menu } from 'lucide-react';
@@ -10,6 +11,7 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import Link from 'next/link';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
   
 function Navbar() {
     const links = ["HOME","PRODUCTS","ABOUT US"]
@@ -26,7 +28,7 @@ function Navbar() {
             <ul className="flex gap-12" >
                 {links.map((e,i)=>{
                     return(
-                      <Link href={`${ e=== 'HOME' && '../' || e === 'PRODUCTS'&& '/product' || e=== 'ABOUT US' && '../' }  ` }> <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent" key={i}>{e}</li></Link>
+                      <Link href={`${ e=== 'HOME' && '../' || e === 'PRODUCTS'&& '/product' || e=== 'ABOUT US' && '../' }  ` } key={i}> <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent">{e}</li></Link>
                     )
                 })}
                 </ul>
@@ -35,7 +37,15 @@ function Navbar() {
                 <div className="pr-4 pt-1  " >
                     <ShoppingBag size={30} className="text-[#24224F] hover:text-white cursor-pointer"/>   
                 </div>
-                <button className=" hidden md:block bg-white px-5 py-1 text-[#24224F] font-medium rounded-[3px] hover:bg-[#24224f] hover:text-white">LOGIN</button>
+                <div className=" hidden md:block bg-white px-5 py-1 text-[#24224F] font-medium rounded-[3px] hover:bg-[#24224f] hover:text-white">
+            <SignedOut>
+              <SignInButton />
+             
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+        </div>
                 <div className="md:hidden ">
         <DropdownMenu >
   <DropdownMenuTrigger  aria-setsize={35} ><Menu size={35}/></DropdownMenuTrigger>

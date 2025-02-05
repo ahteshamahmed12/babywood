@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '@/sanity/lib/image'
 import Link from 'next/link'
-import { Key } from 'lucide-react'
+
 const Ourproduct = async () => {
     const prod=await client.fetch(`*[_type == "Product"][7..9]{
         title,
@@ -46,7 +46,7 @@ const Ourproduct = async () => {
                         <div className={`${index >= 1&& 'mt-24'} ${index == 0 && 'mb-8'} `} >
                     <h5 className={`text-center text-[#24224f] font-[poppins] font-semibold text-3xl `}>{list.title}</h5>
                     <div className='flex justify-center  items-center mt-10'>
-                    <button className='bg-[#24224f] text-white w-[130px] xl:w-[180px] xl:h-[44px] h-8 cursor-pointer ' ><Link href={"product/"}>Buy Now</Link></button>
+                    <button className='bg-[#24224f] text-white w-[130px] xl:w-[180px] hover:text-[#24224f] hover:bg-white hover:border hover:border-[#24224f] xl:h-[44px] h-8 cursor-pointer ' ><Link href={'product'}>Buy Now</Link></button>
                     </div>
                     </div>
                     

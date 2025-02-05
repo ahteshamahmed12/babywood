@@ -36,6 +36,7 @@ function Footer() {
                   shop.map((e,i)=>{
                     return(
                     
+                        // eslint-disable-next-line react/jsx-key
                         <ul>
                           <li key={i} className={`${e == "SHOP" && 'text-white font-medium pt-6'} text-[#24224f] pt-4`}>{e}</li>
                         </ul>
@@ -49,9 +50,10 @@ function Footer() {
                 {
                   compony.map((e,i)=>{
                     return(
+                      // eslint-disable-next-line react/jsx-key
                       <div>
                         <ul>
-                          <li  key={i} className={`${e == "COMPANY" && 'text-white font-medium pt-6'} text-[#24224f] pt-4`}>{e}</li>
+                          <li className={`${ e == "COMPANY" && 'text-white font-medium pt-6'} text-[#24224f] pt-4`}>{e}</li>
                         </ul>
                       </div>
                     )
