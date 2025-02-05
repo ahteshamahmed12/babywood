@@ -1,11 +1,18 @@
+
+
 import { Button } from '@/components/ui/button';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
 
+
 const page = async (props:any) => {
+
+  
   const prod=await client.fetch(`*[_type == "Product" && _id == "${props.params.id}"]`);
   console.log(prod)
+ 
+ 
    
   return (
     <div className='px-4 mt-7 md:px-8 md:mt-7 lg:mt-12 pb-10'>
@@ -35,11 +42,10 @@ const page = async (props:any) => {
          <h4 className='font-semibold' >Type: {res.type}</h4> 
          <h4 className='font-semibold' >Weight: {res.weight}</h4> 
          <h4 className='font-semibold'>Price: {res.price} Rs</h4> 
-      <Button> Add to Cart </Button>
+
          </div>
          </div>
    
-
     <div>
       
       

@@ -12,7 +12,7 @@ import {
 import Link from 'next/link';
   
 function Navbar() {
-    const links = ["HOME","PRODUCTS","CONTACT"]
+    const links = ["HOME","PRODUCTS","ABOUT US"]
   return (
     <>
     <header className='border-b border-white shadow-lg'>
