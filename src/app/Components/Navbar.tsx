@@ -26,7 +26,7 @@ function Navbar() {
             <ul className="flex gap-12" >
                 {links.map((e,i)=>{
                     return(
-                      <Link href={`${ e=== 'HOME' && '../' || e === 'PRODUCTS'&& '/product' || e=== 'CONTACT' && '/Contact' }  ` }> <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent" key={i}>{e}</li></Link>
+                      <Link href={`${ e=== 'HOME' && '../' || e === 'PRODUCTS'&& '/product' || e=== 'ABOUT US' && '../' }  ` }> <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent" key={i}>{e}</li></Link>
                     )
                 })}
                 </ul>
