@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 async function fetchProducts() {
+  
   return await client.fetch(
     `*[_type == "Product"]{
       title,
