@@ -2,10 +2,10 @@ import { Button } from '@/components/ui/button';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const page = async (props:any) => {
-
   
   const prod=await client.fetch(`*[_type == "Product" && _id == "${props.params.id}"]`);
   console.log(prod)
@@ -13,49 +13,59 @@ const page = async (props:any) => {
  
    
   return (
-    <div className='px-4 mt-7 md:px-8 md:mt-7 lg:mt-12 pb-10  '>
-     { prod.map((res:any,index:any)=>(
-    <div className='flex flex-col  gap-10 xl:flex-row xl:justify-items-start  ' key={index}>
-      <div className="w-full md:flex md:flex-col md:justify-center  md:items-center   ">
-      {res.image && (
-
-          <Image 
-          width={500}
-          height={400}
-          src={urlFor(res.image).url()}
-          alt='images'
-          className=' relative w-full  max-w-[300px]  md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] h-auto mt-3 '
+   <main>
+    <div className='mt-8 mx-auto px-4 py-8 '>
+      {
+        prod.map((list:any,index:any)=>(
+      <div className='flex flex-col lg:flex-row lg:justify-around lg:items-start gap-8' key={index}>
+    
+        <div className=" flex justify-center items-center ml-2 lg:mt-7  ">
+          <Image
+           width={180}
+           height={180}
+           src={urlFor(list.image).url()}
+           alt={list.title}
+           className="  md:w-[240px] md:h-[240px] max-w-full lg:w-[400px] lg:h-[300px] transition-transform duration-300 hover:scale-105 hover:shadow-lg"
           />
-        
-         )}
-       </div>
-         
-
-         <div  className='text-[#24224f] flex flex-col gap-6 xl:mt-24 '>
-         <h4 className='text-center text-4xl pt-6'>{res.title}</h4> 
-         <p className='text-pretty  text-2xl'>{res.description}</p>
-         <div className='bg-[#8bd5ff] text-center text-2xl flex flex-col gap-4 py-5  '> 
-        <h4  className='font-semibold'>Baby age: {res.tags}</h4> 
-         <h4 className='font-semibold' >Brand: {res.brand}</h4> 
-         <h4 className='font-semibold' >Type: {res.type}</h4> 
-         <h4 className='font-semibold' >Weight: {res.weight}</h4> 
-         <h4 className='font-semibold'>Price: {res.price} Rs</h4> 
-
-         </div>
-         </div>
-   
-    <div>
-      
-      
-    </div>
-
-
-         
         </div>
-      ))}
-       
+        <div className='w-full lg:w-1/2 text-[#2a267b] font-sans px-4 lg:px-8'>
+        <div className=''>
+          <p className='text-2xl font-semibold '>{list.title}</p>
+          
+        </div>
+        <div className=' mt-4 '>
+          <h5 className='text-lg  font-semibold '>Product Description</h5>
+          <p className='font-[satoshi] text-[14px] text-justify pt-2 '>{list.description}</p>
+       <ul style={{listStyleType:'disc'}} className='ml-6 mt-2 text-sm'>
+        <li >{list.weight}</li>
+        <li >{list.type}</li>
+        <li >{list.brand}</li>
+        
+       </ul>
+       <h6 className='text-lg font-semibold mt-4 ' >Dosage</h6>
+       <ul style={{listStyleType:"disc"}} className='ml-8' >
+      
+        <li>{list.tags}</li>
+       </ul>
+       <h6 className='text-lg font-semibold mt-4 ' >Price</h6>
+       <ul style={{listStyleType:"disc"}} className='ml-8' >
+      
+        <li>{list.price} rs</li>
+       </ul>
+        </div>
+        <div className='flex justify-center lg:justify-start  mt-8 mb-8'>
+      <button className='w-[90%] h-[56px] bg-[#2a254b] hover:text-[#2a254b] hover:bg-white hover:border-[2px]  hover:border-[#2a254b] text-white text-[satoshi] font-normal text-[16px] '>Add to cart<Link href={""}></Link></button>
     </div>
-  )
-}
+       </div>
+      
+          </div>
+          
+        ))
+      }
+   
+    
+    </div>
+   </main>
+)}
 
 export default page
