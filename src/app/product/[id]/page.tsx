@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { client } from "@/sanity/lib/client";
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,11 +11,23 @@ const page = async (props: any) => {
     `*[_type == "Product" && _id == "${props.params.id}"]`
   );
   
-
+function notify (){
+  toast.success('add to cart successfully', {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+    });
+}
 
   const handleClick = (product: any) => {
     const cart =JSON.parse(localStorage.getItem('cart')|| '{}')
-console.log(cart);
+
 if (cart[product.title]){
   cart[product.title] = {...cart[product.title],quantity : cart[product.title].quantity + 1}
 }
@@ -69,11 +82,14 @@ else{
               </div>
               <div className="flex justify-center lg:justify-start  mt-8 mb-8">
                 <button
-                  onClick={() => handleClick(list)}
+                  onClick={() => {handleClick(list)
+                    notify()
+                  }}
                   className="w-[90%] h-[56px] bg-[#2a254b] hover:text-[#2a254b] hover:bg-white hover:border-[2px]  hover:border-[#2a254b] text-white text-[satoshi] font-normal text-[16px] "
                 >
                   Add to cart<Link href={""}></Link>
                 </button>
+                <ToastContainer />
               </div>
             </div>
           </div>

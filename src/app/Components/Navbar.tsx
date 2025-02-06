@@ -1,4 +1,4 @@
-
+import CartIndicator from './CartIndicator';
 import Image from 'next/image'  
 import {  ShoppingBag } from 'lucide-react';
 import { Menu } from 'lucide-react';
@@ -35,7 +35,7 @@ function Navbar() {
         </div>
         <div className=" flex">
                 <div className="pr-4 pt-1  " >
-                    <ShoppingBag size={30} className="text-[#24224F] hover:text-white cursor-pointer"/>   
+                   <Link href={'/cart'}> <ShoppingBag size={30} className="text-[#24224F] hover:text-white cursor-pointer"/>   </Link>
                 </div>
                 <div className=" hidden md:block bg-white px-5 py-1 text-[#24224F] font-medium rounded-[3px] hover:bg-[#24224f] hover:text-white">
             <SignedOut>
@@ -61,7 +61,7 @@ function Navbar() {
 
         </div>
         </div>
-       
+       <CartIndicator />
     </nav>
     </header>
     </>

@@ -65,7 +65,7 @@ export default function Product() {
               <div className="mt-4 text-center font-semibold text-[#24224f]">
                 <h5 className="text-xl">{list.title}</h5>
                 <div className="flex pt-1 justify-center">
-                  <p className="pr-3">${list.price}</p>
+                  <p className="pr-3">PKR:{list.price}</p>
                   <h6 className="border-l border-black text-gray-600 pl-3">{list.brand}</h6>
                 </div>
               </div>
