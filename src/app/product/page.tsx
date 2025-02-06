@@ -68,7 +68,7 @@ export default function Product() {
                   <h6 className="border-l border-black text-gray-600 pl-3">{list.brand}</h6>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center mt-4">
                 <button className="bg-[#24224f] hover:text-[#24224f] hover:bg-white hover:border hover:border-[#24224f] text-white w-[130px] xl:w-[180px] xl:h-[44px] h-10 rounded-md text-center cursor-pointer">
                   Buy Now
                 </button>

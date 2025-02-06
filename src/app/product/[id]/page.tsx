@@ -19,13 +19,13 @@ const page = async (props:any) => {
         prod.map((list:any,index:any)=>(
       <div className='flex flex-col lg:flex-row lg:justify-around lg:items-start gap-8' key={index}>
     
-        <div className=" flex justify-center items-center ml-2 lg:mt-7  ">
+        <div className=" flex justify-center items-center ml-2 lg:mt-7 lg:ml-10  ">
           <Image
            width={180}
            height={180}
            src={urlFor(list.image).url()}
            alt={list.title}
-           className="  md:w-[240px] md:h-[240px] max-w-full lg:w-[400px] lg:h-[300px] transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+           className="  md:w-[240px] md:h-[240px] max-w-full lg:w-[350px] lg:h-[300px] transition-transform duration-300 hover:scale-105 hover:shadow-lg"
           />
         </div>
         <div className='w-full lg:w-1/2 text-[#2a267b] font-sans px-4 lg:px-8'>
