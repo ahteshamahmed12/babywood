@@ -1,8 +1,5 @@
 import React from 'react'
-import { MessageCircle } from 'lucide-react';
-import { ChevronRight } from 'lucide-react';
-import { ChevronLeft } from 'lucide-react';
-  
+
 const Aboutus = () => {
     let feedbackcard =[
         {   
