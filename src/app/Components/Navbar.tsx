@@ -28,7 +28,7 @@ function Navbar() {
             <ul className="flex gap-12" >
                 {links.map((e,i)=>{
                     return(
-                      <Link href={`${ e=== 'HOME' && '../' || e === 'PRODUCTS'&& '/product' || e=== 'ABOUT US' && '../' }  ` } key={i}> <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent">{e}</li></Link>
+                      <Link href={`${ e=== 'HOME' && '../' || e === 'PRODUCTS'&& '/product' || e=== 'ABOUT US' && '/Aboutus' }  ` } key={i}> <li className="text-[#24224F] font-medium cursor-pointer hover:border-b-2 hover:border-white border-b-2 px-1 border-transparent">{e}</li></Link>
                     )
                 })}
                 </ul>
@@ -52,10 +52,16 @@ function Navbar() {
   <DropdownMenuContent className='bg-[#24224f] text-white'>
     
     <DropdownMenuSeparator  />
-    <DropdownMenuItem>HOME</DropdownMenuItem>
-    <DropdownMenuItem>PRODUCTS</DropdownMenuItem>
-    <DropdownMenuItem>CONTACT</DropdownMenuItem>
-    <DropdownMenuItem >LOGIN</DropdownMenuItem>
+    <DropdownMenuItem> <Link href={"./"}>HOME </Link> </DropdownMenuItem>
+    <DropdownMenuItem> <Link href={"/product"}> PRODUCTS</Link></DropdownMenuItem>
+    <DropdownMenuItem> <Link href={"/Aboutus"}> ABOUT US </Link></DropdownMenuItem>
+    <DropdownMenuItem> <SignedOut>
+              <SignInButton />
+             
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn> </DropdownMenuItem>
   </DropdownMenuContent>
 </DropdownMenu>
 
