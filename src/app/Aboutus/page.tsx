@@ -37,11 +37,11 @@ const Aboutus = () => {
         <div>
             <h4 className='text-[#24224F] text-3xl font-serif text-center'>Feedback Corner</h4>
         </div>
-        <div className='flex flex-col items-center md:flex-row justify-evenly pt-12 md:pt-20 md:px-10  pb-10 gap-8 md:gap-5   '>
+        <div className='flex flex-col items-center md:flex-col justify-evenly pt-12 md:pt-20 md:px-10  pb-10 gap-8 md:gap-5   '>
             {
                 feedbackcard.map((e,i)=>{
                     return(
-                        <div key={i} className={` h-[320px] mb-16 rounded-xl w-[300px] md:w-[350px] border-[1.5px] border-transparent shadow-lg shadow-slate-300 ${i == 1 && ' bg-[#8bd5ff] text-white'} ${i == 3 &&' bg-[#8bd5ff] text-white '} `}>
+                        <div key={i} className={` h-[300px]  mb-16 rounded-xl w-[300px] md:w-[350px] border-[1.5px] border-transparent shadow-lg shadow-slate-300 ${i == 1 && ' bg-[#8bd5ff] text-white'} ${i == 3 &&' bg-[#8bd5ff] text-white '} `}>
                             <div className=' px-4 pt-2  pb-2 ' >
                                 
                               <h1 className='text-xl text-[#24224F] font-serif pt-3 text-center md:text-left '>{e.name}</h1>
