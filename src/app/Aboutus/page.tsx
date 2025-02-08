@@ -12,7 +12,7 @@ const Aboutus = () => {
         {   
             
             name:"Ghufran",
-            rollno:645342,
+            rollno:482255,
             description:"We are incredibly grateful to Sir Zia Khan, Sir Ameen Alam, and Sir Daniyal Nagori for their  efforts in bringing the world’s top AI course to Pakistan . Their dedication has opened doors for countless students, offering an opportunity to secure a bright future."
 
         },

@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className=' flex flex-col-reverse  md:flex-row justify-center md:justify-evenly items-center bg-[#8bd5ff] pt-6 '>
             <div className=' md:pt-10 text-center md:text-left bg-[#8bd5ff] pt-6'>
                 <h6 className='font-serif text-3xl lg:text-7xl font-medium text-[#24224f] '>
-                Easily buy baby <br /> milk powder <br />for healthy 
+                Easily buy baby <br /> milk powder <br />for health 
                 </h6>
                 <p className="pt-4 text-[#24224f] ">
                 Nutritious baby milk powder for healthy <br />growth, easy digestion, strong immunity, and <br className="hidden md:block" /> happy babies
